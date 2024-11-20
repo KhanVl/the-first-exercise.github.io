@@ -141,6 +141,19 @@ a:hover{
     transition: .3s ease all;
 }
 
+.btn-2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+    transition: .4s ease all;
+    cursor: pointer;
+}
+
 .button:hover{
     background-color: #FFE0E9;
 }
@@ -255,7 +268,71 @@ a:hover{
     display: none;
 }
 
+/* ----------------  brands-block  ----------------*/
 
+.brands{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.brands:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #D9FFF5;
+}
+
+.brands-inner{
+    padding: 15px;
+}
+
+.brands-title{
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+}
+
+.brands-img{
+    display: inline-flex;
+    align-items: center;
+    width: 128px;
+    height: 40px;
+}
+
+
+
+.brands-item{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    max-width: 100%;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 45px;
+}
+
+.second-block{
+    display: none;
+}
+
+.brands-button{
+    display: none;
+}
+
+
+
+/* ----------------  /brands-block  ----------------*/
 
 @media only screen and (min-width: 576px){
     .app-header__separator.none{
@@ -269,23 +346,25 @@ a:hover{
     .app-header__block.left{
         display: flex;
     }
+
+    
 }
 
 @media only screen and (min-width: 768px){
     .app-header{
         display: none;
     }
-
+    
     .services-nav__items{
         display: flex;
         align-items: center;
         flex-wrap: wrap;
     }
-
+    
     .services-img{
         margin-top: 0;
     }
-
+    
     .content-block__services.bottom{
         display: flex;
     }
@@ -294,6 +373,13 @@ a:hover{
     .services-head{
         display: flex;
         align-items: center;
+    }
+    
+    
+    
+/* ----------------  /brands-block  ----------------*/
+    .brands-item{
+        margin-bottom: 20px;
     }
     
 }
@@ -344,7 +430,7 @@ a:hover{
         margin-right: 10px;
     }
 
-    /* aside-block */
+    /* ----------------  aside-block  ----------------*/
 
     .aside{
         width: 320px;
@@ -486,4 +572,49 @@ a:hover{
         margin-right: 8px;
     }
 
+    /* ----------------  brands-block  ----------------*/
+
+    .brands{
+        position: relative;
+        z-index: 1;
+    }
+
+    .brands:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #D9FFF5;
+    }
+
+    .brands-items__inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .brands-item{
+        max-width: 240px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .brands-item:last-child{
+        margin-right: 0;
+    }
+
+    .brands-inner{
+        padding: 32px;
+    }
+
+    .brands-button{
+        display: inline-flex;
+        align-items: center;
+        color: #1B1C21;
+    }
+
+    
 }
