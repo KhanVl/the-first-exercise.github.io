@@ -1,17 +1,15 @@
-function readMore() {
-    var dots = document.getElementById("dots");
-    var more = document.getElementById("more");
-    var btn = document.getElementById("btn");
-
-    if(dots.style.display === "none") {
-        dots.style.display="inline";
-        btn.innerHTML="Читать далее";
-        more.style.display="none";
-    } else{
-        dots.style.display="none";
-        btn.innerHTML="Скрыть";
-        more.style.display="inline";
-    }
-    
-};
-
+const showButton = document.querySelector('.toggle-button:not(.hidden)');
+const hideButton = document.querySelector('.toggle-button.hidden');
+const additionalItems = document.querySelector('.services-text__more');
+// Обработчик для кнопки "Показать все"
+showButton.addEventListener('click', function () {
+    additionalItems.style.display = 'inline-flex';
+    showButton.style.display = 'none'; // Скрываем верхнюю кнопку
+    hideButton.style.display = 'inline-flex'; // Показываем кнопку "Скрыть"
+});
+// Обработчик для кнопки "Скрыть"
+hideButton.addEventListener('click', function () {
+    additionalItems.style.display = 'none';
+    showButton.style.display = 'inline-flex'; // Показываем верхнюю кнопку
+    hideButton.style.display = 'none'; // Скрываем кнопку "Скрыть"
+});

@@ -154,13 +154,14 @@ a:hover{
     cursor: pointer;
 }
 
-.button:hover{
-    background-color: #FFE0E9;
-}
 
 .icon:hover{
     color: #ff3e79;
     fill: #ff3e79;
+}
+
+.services-item:hover .button{
+    background-color: #FFE0E9;
 }
 
 .app-header__separator{
@@ -250,14 +251,18 @@ a:hover{
     height: 40px;
 }
 
-.services-button__more{
+.toggle-button{
     display: inline-flex;
     align-items: center;
     color: #1B1C21;
 }
 
-#more{
+.toggle-button.hidden{
     display: none;
+}
+
+.icon.rotate{
+    transform: rotate(180deg);
 }
 
 .services-img{
@@ -268,6 +273,13 @@ a:hover{
     display: none;
 }
 
+.services-text__more{
+    display: none;
+}
+
+.toggle-button.hidden{
+    margin-top: 10px;
+}
 
 
 @media only screen and (min-width: 576px){
@@ -312,7 +324,7 @@ a:hover{
     }
     
     
-    
+} 
 
 
 @media only screen and (min-width: 768px){
